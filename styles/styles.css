@@ -113,18 +113,39 @@ nav h1{
 }
 
 .selection .item{
-    
+    cursor: pointer;
     flex: 1;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
-    
+    align-items: center;   
 }
-
-
 .selection .item img{
     height: 120px;
     padding: 30px;
 }
 
+/* BUTTON   "NEW GAME" */
+
+.wrapper button{
+    cursor: pointer;
+    background-color: #FF340D;
+    font-family: Exo;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #D6EFFF;
+    padding: 12px 32px;
+    border: 3px solid #ffffff;
+    border-radius: 4px;
+}
+
+.wrapper{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
