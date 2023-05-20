@@ -5,3 +5,85 @@
     padding: 0px;
     margin: 0px;
 }
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+
+/* Navigation */
+nav{
+    width: 100%;
+    background-color: #0096E6;
+}
+
+nav h1{
+    font-family: Exo;
+    font-size: 48px ;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    padding: 24px;
+}
+
+
+/* Main game Screen */
+
+.container{
+    margin-top: 40px;
+    height: 55vh;
+    padding: 0 24px;
+    display: flex;
+}
+
+.player{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    
+}
+
+.history{
+    flex: 1;
+    display: flex;
+    gap: 8px;
+    justify-content: space-around;
+    align-items: end;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.circle {
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    border: 1px solid #0096E6;
+}
+
+.player-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.player-info p{
+    font-family: Exo;
+    font-size: 40px ;
+    font-weight: bolder;
+    color: #000000;
+}
+
+.player img{
+    height: 90%;
+}
+
+.flipped{
+    transform: scaleX(-1);
+}
+
+.selection{
+    background-color: red;
+    height: 200px;
+}
