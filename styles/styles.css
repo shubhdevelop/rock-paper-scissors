@@ -83,7 +83,41 @@ nav h1{
     transform: scaleX(-1);
 }
 
-.selection{
-    background-color: red;
-    height: 200px;
+.selection-wrapper{
+    margin-top: 24px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.selection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    gap: 30px;
+    padding: 0 50px;
+
+    background: #F6FCFF;
+    border: 3px solid #0096E6;
+    border-radius: 28px;
+
+}
+
+.selection .item{
+    
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+
+.selection .item img{
+    height: 120px;
+    padding: 30px;
+}
+
