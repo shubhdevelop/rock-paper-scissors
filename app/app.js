@@ -124,7 +124,7 @@ function updateHistory(whoWon){
     // console.log(currentGameNumber);
     console.log(currentGameNumber);
     if(currentGameNumber <= 4){
-            history[currentGameNumber++].classList.toggle(whoWon == "user" ? "won1" : "won2");
+            history[currentGameNumber++].classList.toggle(whoWon == "user" ? "wonbyplayer" : "wonbycomputer");
             if (whoWon == "user" ){
                 gameWonByUser++
             }else {
