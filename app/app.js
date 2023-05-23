@@ -1,7 +1,14 @@
 let selection = document.querySelectorAll(".item");
+let player1 = document.querySelector(".player1");
+let player2 = document.querySelector(".player2");
 //defining current value of user
 let user;
 let computer;
+let FILEPATH = {
+    rock : "./images/rock paper scissors/rock.svg",
+    paper : "./images/rock paper scissors/paper.svg",
+    scissors: "./images/rock paper scissors/scissors.svg"
+}
 
 //Adding event listener to all the selection items
 selection.forEach((item)=> {
@@ -13,16 +20,22 @@ item.addEventListener("click", getUserChoice);
 //function to get the choice of the user  
 function getUserChoice(e){
     user = e.target.alt;
+   
+    player1.src = FILEPATH[user];
+    
+
     console.log("user choice set ;", user);
     //After setting userChoice set computer's choice
     setComputerChoice();
-    start()
+    start() 
 }
 
-
+    
 //this sets the computer choice to any random choice
 function setComputerChoice(){
         computer = randomChoice()
+        player2.src = FILEPATH[computer];
+    
         console.log("computer choice set ;", computer);
 }
 
