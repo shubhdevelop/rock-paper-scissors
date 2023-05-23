@@ -137,6 +137,7 @@ function updateHistory(whoWon){
         setTimeout(function() {
             gameWonByUser>gameWonByComputer ? delayAlert(100, "User Won YAy") : delayAlert(100, "Computer Won Yay!");
         }, 100);
+        
     }
     
 }

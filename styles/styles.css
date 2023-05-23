@@ -93,6 +93,7 @@ nav h1{
     border-radius: 20%;
     height: 500px;
     width: 500px;
+    
 }
 .player1{
     box-shadow: 5px 5px 10px #0096E6;
@@ -172,3 +173,87 @@ nav h1{
     align-items: center;
 }
 
+
+
+@media only screen and (max-width: 1120px){
+    .container{
+        flex-direction: column;
+    }
+    .player1 , .player2{
+        width: 350px;
+        height: 150px ;
+    }
+    .history{
+        gap: 4px;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        
+    }
+    
+    .circle {
+        height: 22px;
+        width: 25px;
+        border-radius: 50px;
+        border: 1px solid #0096E6;
+        box-shadow: 5px 5px 10px #FF340D;
+    }
+}
+
+@media only screen and (max-width: 520px){
+    .container{
+        flex-direction: column;
+    }
+    .player1 , .player2{
+        width: 250px;
+        height: 150px ;
+    }
+    .history{
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        
+    }
+    
+}
+
+@media only screen and (max-width: 450px){
+    
+.selection-wrapper{
+    margin-top: 12px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    gap: 10px;
+    padding: 0 20px;
+    
+
+}
+
+.selection .item{
+    justify-content: center;
+    align-items: center;   
+    
+}
+
+.selection .item:active{
+    background-color: #0096E6;
+}
+.selection .item img{
+    height: 120px;
+    border-radius: 12px;
+    padding: 5px;
+    box-shadow: 2px 2px 5px #FF340D;
+}
+
+    
+}
