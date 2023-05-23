@@ -107,7 +107,7 @@ nav h1{
     height: 100%;
     gap: 30px;
     padding: 0 50px;
-
+    flex: .2;
     background: #F6FCFF;
     border: 3px solid #0096E6;
     border-radius: 28px;
@@ -155,6 +155,5 @@ nav h1{
     justify-content: center;
     gap: 20px;
     align-items: center;
-    width: 100%;
 }
 
