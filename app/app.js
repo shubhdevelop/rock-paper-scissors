@@ -4,11 +4,14 @@ let player2 = document.querySelector(".player2");
 //defining current value of user
 let user;
 let computer;
+let currentGameNumber = 0;
 let FILEPATH = {
     rock : "./images/rock paper scissors/rock.svg",
     paper : "./images/rock paper scissors/paper.svg",
     scissors: "./images/rock paper scissors/scissors.svg"
 }
+let gameWonByUser = 0;
+let gameWonByComputer = 0;
 
 //Adding event listener to all the selection items
 selection.forEach((item)=> {
@@ -63,10 +66,12 @@ function decide(player1 , player2){
         switch (player2) {
             case "paper":
                 console.log("user: You Lost!");
+                updateHistory("computer");
                 break;
         
             case "scissors":
                 console.log("user: you won");
+                updateHistory("user");
                 break;
             default:
                 console.log("This is a draw");
@@ -79,10 +84,12 @@ function decide(player1 , player2){
         switch (player2) {
             case "scissors":
                 console.log("user: You Lost!");
+                updateHistory("computer");
                 break;
         
             case "rock":
                 console.log("user: you won");
+                updateHistory("user");
                 break;
             default:
                 console.log("This is a draw");
@@ -96,15 +103,46 @@ function decide(player1 , player2){
         switch (player2) {
             case "rock":
                 console.log("user: You Lost!");
+                updateHistory("computer");
                 break;
         
             case "paper":
                 console.log("user: you won");
+                updateHistory("user");
                 break;
             default:
                 console.log("This is a draw");
         }
+        
     }
 
+}
+
+
+function updateHistory(whoWon){
+    let history = document.querySelectorAll(".circle"); 
+    // console.log(currentGameNumber);
+    console.log(currentGameNumber);
+    if(currentGameNumber <= 4){
+            history[currentGameNumber++].classList.toggle(whoWon == "user" ? "won1" : "won2");
+            if (whoWon == "user" ){
+                gameWonByUser++
+            }else {
+                gameWonByComputer++
+            }
+            console.log(currentGameNumber);
+    }   
+    
+    if(currentGameNumber == 5 ){
+        setTimeout(function() {
+            gameWonByUser>gameWonByComputer ? delayAlert(100, "User Won YAy") : delayAlert(100, "Computer Won Yay!");
+        }, 100);
+    }
+    
+}
+function delayAlert(duration ,alertMsg){
+    setTimeout(function() {
+        alert(alertMsg);
+    }, duration);
 }
 

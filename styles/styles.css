@@ -13,6 +13,12 @@
 .flipped{
     transform: scaleX(-1);
 }
+.won1{
+    background-color: #FF340D;
+}
+.won2{
+    background-color: yellow;
+}
 
 /* Navigation */
 nav{
@@ -65,7 +71,6 @@ nav h1{
     height: 50px;
     width: 50px;
     border-radius: 50px;
-    background: #FFFFFF;
     border: 1px solid #0096E6;
     box-shadow: 5px 5px 10px #FF340D;
 }
