@@ -84,8 +84,10 @@ nav h1{
     color: #000000;
 }
 
-.player img{
-    height: 90%;
+.player1, .player2{
+    border-radius: 20%;
+    height: 500px;
+    width: 500px;
     box-shadow: 5px 5px 10px #f09b0793;
 }
 
@@ -120,6 +122,7 @@ nav h1{
     display: flex;
     justify-content: space-between;
     align-items: center;   
+    
 }
 
 .selection .item:active{
@@ -127,6 +130,7 @@ nav h1{
 }
 .selection .item img{
     height: 120px;
+    border-radius: 12px;
     padding: 30px;
     box-shadow: 2px 2px 5px #FF340D;
 }
