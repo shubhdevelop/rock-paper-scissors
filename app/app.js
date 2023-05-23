@@ -1,6 +1,7 @@
 let selection = document.querySelectorAll(".item");
 let player1 = document.querySelector(".player1");
 let player2 = document.querySelector(".player2");
+let resetButton = document.querySelector(".reset-game");
 //defining current value of user
 let user;
 let computer;
@@ -137,6 +138,10 @@ function updateHistory(whoWon){
         setTimeout(function() {
             gameWonByUser>gameWonByComputer ? delayAlert(100, "User Won YAy") : delayAlert(100, "Computer Won Yay!");
         }, 100);
+
+        setTimeout(()=>{
+            reset()
+        },2000);
         
     }
     
@@ -146,4 +151,24 @@ function delayAlert(duration ,alertMsg){
         alert(alertMsg);
     }, duration);
 }
+
+function reset(){
+user = undefined;
+computer = undefined;
+currentGameNumber = 0;
+gameWonByUser = 0;
+gameWonByComputer = 0;
+
+player1.src = "./images/rock paper scissors/nothing.png"; 
+player2.src = "./images/rock paper scissors/nothing.png"; 
+let history = document.querySelector(".history").innerHTML = ` <div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>`
+
+
+}
+
+resetButton.addEventListener("click", reset)
 

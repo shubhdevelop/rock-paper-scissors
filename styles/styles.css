@@ -141,17 +141,19 @@ nav h1{
     background-color: #0096E6;
 }
 .selection .item img{
+    
     height: 120px;
     border-radius: 12px;
     padding: 30px;
     box-shadow: 2px 2px 5px #FF340D;
+    
 }
 
 /* BUTTON   "NEW GAME" */
 
 .wrapper button{
     cursor: pointer;
-    background-color: #FF340D;
+    background-color: #0096E6;
     font-family: Exo;
     font-style: normal;
     font-weight: 900;
